@@ -1,0 +1,15 @@
+{% extends "portfolio/base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="container p-1 my-1 bg-primary text-white">
+	<h2 class="text-center mt-5" id="blogdetailtitle">{{ blog.title }}</h2>	
+</div>
+<br>
+<h5 class="text-center text-muted mb-5">{{ blog.date|date:'F jS Y' }}</h5>
+
+{{ blog.content|safe }}
+
+{% endblock %}
